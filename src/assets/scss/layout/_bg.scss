@@ -9,6 +9,7 @@
 #bg {
   @include vendor('transform', 'scale(1.0)');
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -33,10 +34,11 @@
       'background-color #{_duration(bg)} ease-in-out'
     );
     @include vendor('transition-delay', '#{_duration(intro)}');
-    background-image: linear-gradient(
-        to top,
-        #{_palette(bg-overlay)},
-        #{_palette(bg-overlay)}
+    background-image: 
+      linear-gradient(
+        120deg,
+        #000000b7 ,
+        #{_palette(bg-overlay-top)} 60%
       ),
       url('../../images/overlay.png');
     background-size: auto, 256px 256px;
@@ -54,7 +56,15 @@
         'filter #{_duration(article)} ease-in-out'
       )
     );
-    background-image: url('../../images/bg.jpg');
+    background-image: 
+    // linear-gradient(
+    //     120deg,
+    //     #{_palette(bg-overlay-top)},
+    //     #{_palette(bg-overlay-bottom)}
+    //   ),
+      // url('../../images/Patagonia_2018-62.jpg') 
+      url('../../images/turtle2.jpg');
+    // background-image: url('../../images/bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
