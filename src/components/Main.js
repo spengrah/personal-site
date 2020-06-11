@@ -5,13 +5,17 @@ import pic02 from '../images/pic02.jpg'
 import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
+  handleClick = () => {
+    this.props.onCloseArticle()
+  }
+
   render() {
     let close = (
       <div
         className="close"
-        onClick={() => {
-          this.props.onCloseArticle()
-        }}
+        onClick={this.handleClick}
+        onKeyDown={this.handleClick}
+        aria-label="close"
       ></div>
     )
 
