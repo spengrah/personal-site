@@ -1,17 +1,21 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import pic01 from '../images/pic01.jpg'
-import pic02 from '../images/pic02.jpg'
+import kayak1 from '../images/kayak1.jpg'
+import Patagonia1 from '../images/Patagonia1.jpg'
 import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
+  handleClick = () => {
+    this.props.onCloseArticle()
+  }
+
   render() {
     let close = (
       <div
         className="close"
-        onClick={() => {
-          this.props.onCloseArticle()
-        }}
+        onClick={this.handleClick}
+        onKeyDown={this.handleClick}
+        aria-label="close"
       ></div>
     )
 
@@ -30,7 +34,7 @@ class Main extends React.Component {
         >
           <h2 className="major">Intro</h2>
           <span className="image main">
-            <img src={pic01} alt="" />
+            <img src={kayak1} alt="" />
           </span>
           <p>
             Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
@@ -64,7 +68,7 @@ class Main extends React.Component {
         >
           <h2 className="major">Work</h2>
           <span className="image main">
-            <img src={pic02} alt="" />
+            <img src={Patagonia1} alt="" />
           </span>
           <p>
             Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
@@ -118,48 +122,79 @@ class Main extends React.Component {
           <form method="post" action="#">
             <div className="field half first">
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name" aria-labelledby="name" />
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <input
+                type="text"
+                name="email"
+                id="email"
+                aria-labelledby="email"
+              />
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                aria-labelledby="message"
+              >
+                {' '}
+              </textarea>
             </div>
             <ul className="actions">
               <li>
-                <input type="submit" value="Send Message" className="special" />
+                <input
+                  type="submit"
+                  value="Send Message"
+                  className="special"
+                  aria-label="send message"
+                />
               </li>
               <li>
-                <input type="reset" value="Reset" />
+                <input type="reset" value="Reset" aria-label="reset" />
               </li>
             </ul>
           </form>
           <ul className="icons">
             <li>
               <a
-                href="https://twitter.com/HuntaroSan"
+                href="https://twitter.com/spengrah"
+                target="_blank"
+                rel="noreferrer"
                 className="icon fa-twitter"
               >
                 <span className="label">Twitter</span>
               </a>
             </li>
             <li>
-              <a href="https://codebushi.com" className="icon fa-facebook">
-                <span className="label">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://codebushi.com" className="icon fa-instagram">
-                <span className="label">Instagram</span>
+              <a
+                href="https://medium.com/@spengrah"
+                className="icon fa-medium"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="label">Medium</span>
               </a>
             </li>
             <li>
               <a
-                href="https://github.com/codebushi/gatsby-starter-dimension"
+                href="https://www.linkedin.com/in/spencergraham/"
+                className="icon fa-linkedin"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="label">LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/slgraham"
                 className="icon fa-github"
+                target="_blank"
+                rel="noreferrer"
               >
                 <span className="label">GitHub</span>
               </a>
