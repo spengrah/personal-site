@@ -1,13 +1,52 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 
-const Header = props => (
-  <header id="header" style={props.timeout ? { display: 'none' } : {}}>
+const Header = props => {
+  return (
+    <StaticQuery
+      query={graphql`
+        query mainQuery {
+          site {
+            siteMetadata {
+              title
+              description
+            }
+          }
+        }
+      `}
+      render={data => (
+        <header id="header" style={props.timeout ? { display: 'none' } : {}}>
           <div className="logo-outline">
             <div className="logo" title='hey look, you found me!'></div>
           </div>
-    <div className="content">
-      <div className="inner">
+
+          <div className="content">
+            <div className="inner">
+              <h1> {data.site.siteMetadata.title}</h1>
+              <p>{data.site.siteMetadata.description}</p>
+            </div>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <button
+                  onClick={() => {
+                    props.onOpenArticle('intro')
+                  }}
+                >
+                  Intro
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    props.onOpenArticle('work')
+                  }}
+                >
+                  Work
+                </button>
+              </li>
               <li>
                 <button
                   onClick={() => {
@@ -17,25 +56,31 @@ const Header = props => (
                   Blog
                 </button>
               </li>
-              props.onOpenArticle('about')
-            }}
-          >
-            About
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => {
-              props.onOpenArticle('contact')
-            }}
-          >
-            Contact
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </header>
-)
+              <li>
+                <button
+                  onClick={() => {
+                    props.onOpenArticle('about')
+                  }}
+                >
+                  About
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    props.onOpenArticle('contact')
+                  }}
+                >
+                  Contact
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      )}
+    />
+  )
+}
 
 Header.propTypes = {
   onOpenArticle: PropTypes.func,
