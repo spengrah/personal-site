@@ -1,0 +1,40 @@
+/* Social */
+
+
+#social {
+  @include vendor(
+    'transition',
+    (
+      'transform #{_duration(article)} ease-in-out',
+      'filter #{_duration(article)} ease-in-out',
+      'opacity #{_duration(article)} ease-in-out'
+    )
+  );
+  width: 100%;
+  max-width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+
+  .body.is-article-visible & {
+    @include vendor('transform', 'scale(0.95)');
+    // @include vendor('filter', 'blur(0.1rem)');
+    opacity: 0;
+  }
+
+  // .body.is-loading & {
+  //   opacity: 0;
+  // }
+
+  // @include breakpoint(xlarge) {
+  //   padding: 3rem 2rem;
+  // }
+
+  @include breakpoint(small) {
+    margin-top: 0rem;
+  }
+
+  // @include breakpoint(xsmall) {
+  //   padding: 1rem;
+  // }
+}
+
