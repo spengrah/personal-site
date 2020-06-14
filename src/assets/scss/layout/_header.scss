@@ -282,6 +282,9 @@
         li {
           border-left: 0;
           border-top: solid _size(border-width) _palette(border);
+          button {
+            width: 100%;
+          }
 
           &:first-child {
             border-top: 0;
