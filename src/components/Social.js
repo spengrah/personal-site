@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import {ReactComponent as Ethereum} from '../images/ethereum.svg'
+import ethereum from '../images/ethereum-white.svg'
 
 const Social = props => (
       <div id='social'
@@ -68,17 +68,17 @@ const Social = props => (
               <span className="label">Instagram</span>
             </a>
           </li>
-          {/* <li>
+          <li>
             <a
               href="https://3box.io/0xa7a5a2745f10d5c23d75a6fd228a408cede1cae5"
-            //   className="icon fa-ethereum"
+              className="icon"
               target="_blank"
               rel="noreferrer"
             >
-
-              <span className="label">Eth</span>
+                <img src={ethereum} alt='' style={{verticalAlign:'middle'}}/>
+              {/* <span className="label">Eth</span> */}
             </a>
-          </li> */}
+          </li>
           
         </ul>
       </div>
