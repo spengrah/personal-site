@@ -75,7 +75,7 @@ const Social = props => (
               target="_blank"
               rel="noreferrer"
             >
-                <img src={ethereum} alt='' style={{verticalAlign:'middle'}}/>
+                <img className='image-icon' src={ethereum} alt=''/>
               {/* <span className="label">Eth</span> */}
             </a>
           </li>
