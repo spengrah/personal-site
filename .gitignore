@@ -10,3 +10,6 @@ yarn-error.log
 # Old images
 /src/images/old
 
+# Original images
+/src/images/big
+
