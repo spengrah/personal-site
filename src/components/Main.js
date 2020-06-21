@@ -37,25 +37,62 @@ class Main extends React.Component {
             <img src={kayak1} alt="" />
           </span>
           <p>
-            Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-            aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-            convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-            magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.
-            By the way, check out my <a href="#work">awesome work</a>.
+            Hi, I'm Spencer. Welcome to my home base on the internet, where
+            sometimes I go by the name Spengrah. Spengrah is a portmanteau of my
+            first and last name, which should tell you something about me: I
+            like portmanteaus.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Etiam tristique
-            libero eu nibh porttitor fermentum. Nullam venenatis erat id
-            vehicula viverra. Nunc ultrices eros ut ultricies condimentum.
-            Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae
-            dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in
-            lectus. Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. In non lorem sit amet elit
-            placerat maximus. Pellentesque aliquam maximus risus, vel sed
-            vehicula.
-          </p>
+          <p>What are some of my other interests?</p>
+          <ul>
+            <li>Burritos, and proper burrito construction</li>
+            <li>
+              Traveling and photography (all the images on this site are
+              pictures I took while traveling). I particularly enjoy
+              experiencing other ecosystems and, insofar as it is safe for me
+              and them, rubbing elbows with the resident fauna.
+            </li>
+            <li>
+              <a
+                href="https://www.goodreads.com/user/show/6234447-spencer-graham"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Reading
+              </a>
+              , with a preference for science fiction and fantasy novels
+              (exploratory escapism, if you will)
+            </li>
+            <li>Urbanism and housing policy. Build more housing!</li>
+            <li>
+              Sports, of the participatory variety: soccer, ultimate frisbee,
+              and cycling
+            </li>
+            <li>
+              Sports, of the observational variety: primarily baseball (go
+              Giants!), soccer, football (go Niners!), and basketball. I draw a
+              great deal of joy experiencing sports from a statistical and
+              analytical perspective.
+            </li>
+            <li>Science. Knowing how things work enhances their beauty. </li>
+            <li>
+              The study of uncertainty and how to make decisions within it.
+              Recently, I've been fascinated with{' '}
+              <a
+                href="https://ergodicityeconomics.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {' '}
+                Ergodicity Economics
+              </a>
+              .
+            </li>
+            <li>
+              Puns. Most of mine are bad, but some are straight gems! My
+              philosophy is that the best way to make quality jokes is to make a
+              lot of jokes.
+            </li>
+          </ul>
           {close}
         </article>
 
