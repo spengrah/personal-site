@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-starter-dimension-v2",
-  "description": "Gatsby Starter - Dimension V2",
+  "name": "spencer-personal-site",
+  "description": "Spengrah's personal site",
   "version": "1.0.0",
-  "author": "Hunter Chang",
+  "author": "Spencer Graham",
   "dependencies": {
     "gatsby": "^2.19.5",
+    "gatsby-plugin-ipfs": "^2.0.2",
     "gatsby-plugin-manifest": "^2.2.38",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sass": "^2.1.27",
@@ -18,7 +19,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
