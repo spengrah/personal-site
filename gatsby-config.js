@@ -4,8 +4,8 @@ module.exports = {
     author: 'Spencer Graham',
     description:
       'Sometimes on the internet I go by the name Spengrah. This is my home page.',
-    pathPrefix: '__GATSBY_IPFS_PATH_PREFIX__',
   },
+  pathPrefix: '__GATSBY_IPFS_PATH_PREFIX__',
   plugins: [
     'gatsby-plugin-react-helmet',
     {
